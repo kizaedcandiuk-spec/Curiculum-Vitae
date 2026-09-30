@@ -1,0 +1,112 @@
+:root {
+    --bg-color: #f0f4f8;
+    --clay-bg: #e4ebf5;
+    --clay-shadow-1: 8px 8px 16px #cbced1, -8px -8px 16px #ffffff;
+    --clay-inset: inset 4px 4px 8px #cbced1, inset -4px -4px 8px #ffffff;
+    --text-color: #333333;
+    --primary-color: #4a90e2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper / Container Utama */
+.cv-container {
+    width: 100%;
+    max-width: 750px;
+    background: var(--clay-bg);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: var(--clay-shadow-1);
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #d1d9e6;
+    padding-bottom: 20px;
+}
+
+.header-section h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--clay-bg);
+    box-shadow: var(--clay-shadow-1);
+    padding: 5px;
+}
+
+/* Section Styling dengan Clay Inset */
+section {
+    margin-bottom: 30px;
+    background: var(--clay-bg);
+    border-radius: 20px;
+    padding: 20px 25px;
+    box-shadow: var(--clay-inset);
+}
+
+section h2 {
+    font-size: 18px;
+    color: #1a252f;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 8px 0;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+/* Penyesuaian Kolom Tabel */
+section:nth-of-type(1) table td:first-child {
+    width: 35%;
+    font-weight: 600;
+    color: #555;
+}
+
+section:nth-of-type(2) table tr td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Responsif Mobile */
+@media (max-width: 600px) {
+    .header-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 15px;
+    }
+    .cv-container {
+        padding: 20px;
+    }
+}
